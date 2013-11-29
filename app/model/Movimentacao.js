@@ -8,7 +8,7 @@ Ext.define('UNA.model.Movimentacao', {
 		{
 			name : 'data_movimentacao',
 			type : 'date',
-			dateFormat: 'Y-m-d'
+			dateFormat: 'd/m/Y'
 		},
 		{
 			name : 'tipo_movimentacao',

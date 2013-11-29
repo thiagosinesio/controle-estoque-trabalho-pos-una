@@ -3,15 +3,15 @@ Ext.define('UNA.model.Cidade', {
 	idProperty  : 'cod_cidade',		
     fields: [
     {
-       name : 'cod_cidade',
+     name : 'cod_cidade',
 	   type: 'int'
     }, 
 	{
-       name : 'cod_estado',
+     name : 'cod_estado',
 	   type: 'int'
     },
 	{
-       name : 'desc_cidade',
+     name : 'desc_cidade',
 	   type: 'string'
     }
     ]

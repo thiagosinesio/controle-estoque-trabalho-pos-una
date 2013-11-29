@@ -1,21 +1,13 @@
 Ext.define('UNA.model.TipoPessoa', {
 		extend		: 'Ext.data.Model',
-		idProperty  : 'cod_usuario',				
+		idProperty  : 'cod_tipo_pessoa',				
 		fields :[{
-			name : 'cod_usuario',
+			name : 'cod_tipo_pessoa',
 			type : 'int'		
 		},
 		{
-			name : 'login',
+			name : 'tipo_pessoa',
 			type : 'string'
-		},
-		{
-			name : 'password',
-			type : 'string'
-		},
-		{
-			name : 'status',
-			type : 'string'
-		}		
+		}	
 		]
 }); 

@@ -3,19 +3,19 @@ Ext.define('UNA.model.Estado', {
 	idProperty  : 'cod_estado',		
     fields: [
     {
-       name : 'cod_estado',
+     name : 'cod_estado',
 	   type: 'int'
     }, 
 	{
-       name : 'cod_pais',
+     name : 'cod_pais',
 	   type: 'int'
     },
 	{
-       name : 'estado_sigla',
+     name : 'estado_sigla',
 	   type: 'string'
     }, 	
 	{
-       name : 'desc_estado',
+     name : 'desc_estado',
 	   type: 'string'
     }
     ]

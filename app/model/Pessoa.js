@@ -3,19 +3,19 @@ Ext.define('UNA.model.Pessoa', {
 	idProperty  : 'cod_pessoa',		
     fields: [
     {
-       name : 'cod_pessoa',
+     name : 'cod_pessoa',
 	   type: 'int'
     }, 
     {
-       name : 'nome',
+     name : 'nome',
 	   type: 'string'
     }, 	
     {
-       name : 'cpfcnpj',
+     name : 'cpfcnpj',
 	   type: 'string'
     },
     {
-       name : 'telefone',
+     name : 'telefone',
 	   type: 'string'
     },
     {
