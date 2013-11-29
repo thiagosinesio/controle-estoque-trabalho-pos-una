@@ -1,7 +1,7 @@
-Ext.require(['EIA.view.AbstractList']);
+Ext.require(['UNA.view.AbstractList']);
 
-Ext.define('EIA.view.categoria.List' ,{
-    extend			: 'EIA.view.AbstractList',
+Ext.define('UNA.view.categoria.List' ,{
+    extend			: 'UNA.view.AbstractList',
     alias 			: 'widget.categoriaList',
     store			: 'Categorias',
     title 			: 'Lista das Categorias',         

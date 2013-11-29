@@ -1,4 +1,4 @@
-Ext.define('EIA.view.AbstractWindow',{
+Ext.define('UNA.view.AbstractWindow',{
     extend: 'Ext.window.Window',
     alias: 'widget.abstractwindow',
     title: 'Edição',

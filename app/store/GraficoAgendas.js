@@ -1,4 +1,4 @@
-Ext.define('EIA.store.GraficoAgendas', {
+Ext.define('UNA.store.GraficoAgendas', {
     extend		: 'Ext.data.Store',
     autoLoad	: false,
     fields		: ['total', 'categoria'],

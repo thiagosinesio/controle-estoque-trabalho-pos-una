@@ -1,8 +1,8 @@
-Ext.require(['EIA.view.AbstractForm']);
-Ext.require(['EIA.view.AbstractWindow']);
+Ext.require(['UNA.view.AbstractForm']);
+Ext.require(['UNA.view.AbstractWindow']);
 
-Ext.define('EIA.view.categoria.Edit', {
-    extend: 'EIA.view.AbstractWindow',
+Ext.define('UNA.view.categoria.Edit', {
+    extend: 'UNA.view.AbstractWindow',
     alias : 'widget.categoriaEdit',
     title : 'Edição de Categoria',
 

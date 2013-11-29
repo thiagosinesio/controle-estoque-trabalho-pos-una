@@ -1,6 +1,6 @@
-Ext.define('EIA.view.Viewport', {
+Ext.define('UNA.view.Viewport', {
     extend: 'Ext.container.Viewport',
-    title: 'Sistema de Agenda EIA 1.0',
+    title: 'Sistema de Agenda UNA 1.0',
     layout: 'border',
     itemId: 'viewPortPrincipal',
     items: [
@@ -8,7 +8,7 @@ Ext.define('EIA.view.Viewport', {
         xtype: 'box',
         id: 'header',
         region: 'north',
-        html: '<h1>Sistema Agenda - EIA 1.0</h1>',
+        html: '<h1>Sistema Agenda - UNA 1.0</h1>',
         height: 45
     }
     ,{

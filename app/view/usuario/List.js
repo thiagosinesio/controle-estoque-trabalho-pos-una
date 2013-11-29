@@ -1,4 +1,4 @@
-Ext.define('EIA.view.usuario.List' ,{
+Ext.define('UNA.view.usuario.List' ,{
     extend	: 'Ext.grid.Panel',
     alias 	: 'widget.usuarioList',
     store	: 'Usuarios',

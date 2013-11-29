@@ -1,4 +1,4 @@
-Ext.define('EIA.model.Agenda', {
+Ext.define('UNA.model.Agenda', {
     extend		: 'Ext.data.Model',
 	idProperty  : 'idAgenda',	
     fields: [

@@ -6,7 +6,7 @@
  * 
  */
 Ext.Loader.setPath('Ext', 'extjs/src');
-Ext.Loader.setPath('EIA', 'app');
+Ext.Loader.setPath('UNA', 'app');
 
 Ext.Loader.setConfig({
     enabled: true,
@@ -24,7 +24,7 @@ Ext.require(['Ext.Window', 'Ext.layout.container.Fit', 'Ext.fx.target.Sprite']);
   
 Ext.onReady(function(){
  
-    var store = Ext.create('EIA.store.Agendas');
+    var store = Ext.create('UNA.store.Agendas');
     var agenda = store.load(); 	
 	
 	console.dir(agenda.data);	

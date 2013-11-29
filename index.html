@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-    <title>Sistema Agenda EIA</title>
+    <title>Sistema Agenda UNA</title>
     <link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
     <script type="text/javascript" src="extjs/ext-all.js"></script>        
     <script type="text/javascript" src="app/ux/Ext.ux.plugin.FormEnter.js"></script>       
@@ -41,7 +41,7 @@
 			
 			var win = Ext.create("Ext.Window",{
 				layout    : 'fit',
-				title     : 'Acesso a Agenda EIA 1.0',
+				title     : 'Acesso a Agenda UNA 1.0',
 				width     : 280, 
 				height    : 140,
 				y         : 250,
@@ -61,7 +61,7 @@
 					login.getForm().submit({
 						method 		: 'POST',
 						waitTitle 	: 'Por favor, aguarde!!!',
-						waitMsg 	: 'Autenticado no sistema agenda EIA 1.0',
+						waitMsg 	: 'Autenticado no sistema agenda UNA 1.0',
 						success     : function(){
 									login.getForm().reset(); 
 									var redirect = 'principal.php';

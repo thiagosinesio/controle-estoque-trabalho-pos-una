@@ -1,6 +1,6 @@
-Ext.define('EIA.store.Categorias', {
+Ext.define('UNA.store.Categorias', {
     extend		: 'Ext.data.Store',
-    model		: 'EIA.model.Categoria',    
+    model		: 'UNA.model.Categoria',    
     remoteSort	: false,    
 	autoLoad	: false,
     pageSize	: 10,
@@ -8,7 +8,7 @@ Ext.define('EIA.store.Categorias', {
    //Create, update, destroy, read 
     proxy		: {
         simpleSortMode	: true,
-        type			: 'ajax',			
+        type			: 'rest',			
 			api         : {
 				read    : 'php/categorias.php?acao=list',
 				create  : 'php/categorias.php?acao=insert',		

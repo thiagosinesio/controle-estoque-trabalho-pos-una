@@ -1,6 +1,6 @@
 Ext.require('Ext.window.MessageBox');
 
-Ext.define('EIA.controller.Usuario', {
+Ext.define('UNA.controller.Usuario', {
     extend	: 'Ext.app.Controller',
     stores	: ['Usuarios'],
     models	: ['Usuario'], 	
@@ -110,7 +110,7 @@ Ext.define('EIA.controller.Usuario', {
             } 
 			else
 			{
-                var record = Ext.create('EIA.model.Usuario');
+                var record = Ext.create('UNA.model.Usuario');
                 record.set(values);
                 this.getUsuarioList().store.add(record);
             }

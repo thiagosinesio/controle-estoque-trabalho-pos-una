@@ -1,4 +1,4 @@
-Ext.define('EIA.view.AbstractList',{
+Ext.define('UNA.view.AbstractList',{
     extend			: 'Ext.grid.Panel',
     alias			: 'widget.abstractlist',
     title			: 'Listagem',

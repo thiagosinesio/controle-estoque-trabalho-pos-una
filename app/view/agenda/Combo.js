@@ -1,4 +1,4 @@
-Ext.define('EIA.view.agenda.Combo', {
+Ext.define('UNA.view.agenda.Combo', {
     extend			: 'Ext.form.field.ComboBox',
     alias			: 'widget.categoriaCombo',
     name 			: 'teCategoria_idCategoria',

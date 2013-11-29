@@ -1,4 +1,4 @@
-Ext.define('EIA.view.agenda.graficoAgenda' ,{
+Ext.define('UNA.view.agenda.graficoAgenda' ,{
     extend	: 'Ext.chart.Chart',
 	alias 	: 'widget.graficoAgenda',   
     style	: 'background:#fff',

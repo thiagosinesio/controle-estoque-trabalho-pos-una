@@ -1,5 +1,5 @@
 Ext.require('Ext.window.MessageBox');
-Ext.define('EIA.controller.Categoria', {
+Ext.define('UNA.controller.Categoria', {
     extend: 'Ext.app.Controller',
     stores: ['Categorias'],
     models: ['Categoria'], 
@@ -160,7 +160,7 @@ Ext.define('EIA.controller.Categoria', {
             } 
 			else
 			{
-                var record = Ext.create('EIA.model.Categoria');
+                var record = Ext.create('UNA.model.Categoria');
                 record.set(values);
                 this.getCategoriaList().store.add(record);
 				this.getCategoriaList().store.sync();

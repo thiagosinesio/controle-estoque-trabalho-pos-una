@@ -1,8 +1,8 @@
-Ext.require(['EIA.view.agenda.ComboRenderer']);
-Ext.require(['EIA.view.AbstractList']);
+Ext.require(['UNA.view.agenda.ComboRenderer']);
+Ext.require(['UNA.view.AbstractList']);
 
-Ext.define('EIA.view.agenda.List' ,{
-    extend		: 'EIA.view.AbstractList',
+Ext.define('UNA.view.agenda.List' ,{
+    extend		: 'UNA.view.AbstractList',
     alias 		: 'widget.agendaList',
     store		: 'Agendas',
     title 		: 'Lista dos Contatos', 
@@ -17,8 +17,8 @@ Ext.define('EIA.view.agenda.List' ,{
             header		: 'Categoria',  
             dataIndex	: 'teCategoria_idCategoria',  
             flex		: 1,
-            //field		: Ext.create('EIA.view.agenda.ComboRenderer'),
-            renderer	: Ext.util.Format.comboRenderer(Ext.create('EIA.view.agenda.ComboRenderer'))
+            //field		: Ext.create('UNA.view.agenda.ComboRenderer'),
+            renderer	: Ext.util.Format.comboRenderer(Ext.create('UNA.view.agenda.ComboRenderer'))
             //renderer: function (value, metadata, record, rowIndex, colIndex, store) 
 			//{                    			                 
 			//	var idx = this.columns[colIndex].field.store.find('idCategoria', value);

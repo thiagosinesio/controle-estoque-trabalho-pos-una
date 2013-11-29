@@ -1,5 +1,5 @@
 Ext.require('Ext.window.MessageBox');
-Ext.define('EIA.controller.Agenda', {
+Ext.define('UNA.controller.Agenda', {
     extend: 'Ext.app.Controller',
     stores: ['Agendas'],
     models: ['Agenda'], 
@@ -161,7 +161,7 @@ Ext.define('EIA.controller.Agenda', {
             } 
 			else
 			{
-                var record = Ext.create('EIA.model.Agenda');
+                var record = Ext.create('UNA.model.Agenda');
                 record.set(values);
                 this.getAgendaList().store.add(record);
 				this.getAgendaList().store.sync();				

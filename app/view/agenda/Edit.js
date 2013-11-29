@@ -1,9 +1,9 @@
-Ext.require(['EIA.view.AbstractForm']);
-Ext.require(['EIA.view.AbstractWindow']);
-Ext.require(['EIA.view.agenda.Combo']);
+Ext.require(['UNA.view.AbstractForm']);
+Ext.require(['UNA.view.AbstractWindow']);
+Ext.require(['UNA.view.agenda.Combo']);
 
-Ext.define('EIA.view.agenda.Edit', {
-    extend: 'EIA.view.AbstractWindow',
+Ext.define('UNA.view.agenda.Edit', {
+    extend: 'UNA.view.AbstractWindow',
     alias : 'widget.agendaEdit',
     title : 'Edição de Contato',
 

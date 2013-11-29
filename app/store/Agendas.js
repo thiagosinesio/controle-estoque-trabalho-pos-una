@@ -1,6 +1,6 @@
-Ext.define('EIA.store.Agendas', {
+Ext.define('UNA.store.Agendas', {
     extend: 'Ext.data.Store',
-    model: 'EIA.model.Agenda',    
+    model: 'UNA.model.Agenda',    
     remoteSort: false,    
 	autoLoad: false,
     pageSize: 10,

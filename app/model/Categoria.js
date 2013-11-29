@@ -1,12 +1,13 @@
-Ext.define('EIA.model.Categoria', {
+Ext.define('UNA.model.Categoria', {
     extend		: 'Ext.data.Model',
-	idProperty  : 'idCategoria',		
+	idProperty  : 'cod_categoria',		
     fields: [
     {
-       name : 'idCategoria',
+       name : 'cod_categoria',
+       type: 'int'
     }, 
     {
-        name : 'NmCategoria',
+        name : 'descricao',
 		type : 'string'
     }
     ]

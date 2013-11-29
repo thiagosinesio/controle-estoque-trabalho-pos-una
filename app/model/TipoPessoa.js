@@ -1,4 +1,4 @@
-Ext.define('UNA.model.Usuario', {
+Ext.define('UNA.model.TipoPessoa', {
 		extend		: 'Ext.data.Model',
 		idProperty  : 'cod_usuario',				
 		fields :[{
