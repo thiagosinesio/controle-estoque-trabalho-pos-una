@@ -10,8 +10,8 @@ Ext.define('UNA.view.categoria.List' ,{
 
 		this.columns = [
         Ext.create('Ext.grid.RowNumberer'),
-        {header: 'Código',  dataIndex: 'idCategoria',  flex: 1},
-        {header: 'Nome',  dataIndex: 'NmCategoria',  flex: 1}        
+        {header: 'Código',  dataIndex: 'id',  flex: 1},
+        {header: 'Nome',  dataIndex: 'descricao',  flex: 1}        
 		]; 
 		
 		this.dockedItems = [{

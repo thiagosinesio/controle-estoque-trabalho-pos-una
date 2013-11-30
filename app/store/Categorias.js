@@ -10,20 +10,20 @@ Ext.define('UNA.store.Categorias', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'php/categorias.php?acao=list',
+				read    : 'http://www.services.ninjadevspace.com/estoqueservice/categorias/list',
 				create  : 'php/categorias.php?acao=insert',		
 				update  : 'php/categorias.php?acao=update',						
 				destroy : 'php/categorias.php?acao=delete'			
 						  },
 		actionMethods 	: {
-				read	: 'POST',
+				read	: 'GET',
 				create	: 'POST',
 				update	: 'POST',
 				destroy : 'POST'		
 						  },  
 			reader		: {
 				type		: 'json',
-				root		: 'data',
+				root		: 'categoria',
             successProperty	: 'success'
         },
 		writer			: {
@@ -31,11 +31,11 @@ Ext.define('UNA.store.Categorias', {
             writeAllFields	: true,
             encode			: true,
             root			: 'data'
-        },
+        },/*
 		extraParams: {             
             sort 	: 'idCategoria, NmCategoria',    
             dir 	: 'ASC'            
-        }, 
+        }, */
         listeners: {
             exception: function(proxy, response, operation){
                 Ext.MessageBox.show({

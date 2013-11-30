@@ -1,9 +1,9 @@
 Ext.define('UNA.model.Categoria', {
     extend		: 'Ext.data.Model',
-	idProperty  : 'cod_categoria',		
+	idProperty  : 'id',		
     fields: [
     {
-       name : 'cod_categoria',
+       name : 'id',
        type: 'int'
     }, 
     {
