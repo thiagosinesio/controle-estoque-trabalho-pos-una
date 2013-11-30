@@ -1,9 +1,9 @@
 Ext.define('UNA.model.Estado', {
     extend		: 'Ext.data.Model',
-	idProperty  : 'cod_estado',		
+	idProperty  : 'id',		
     fields: [
     {
-     name : 'cod_estado',
+     name : 'id',
 	   type: 'int'
     }, 
 	{

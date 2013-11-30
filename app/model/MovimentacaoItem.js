@@ -1,7 +1,11 @@
 Ext.define('UNA.model.MovimentacaoItem', {
     extend		: 'Ext.data.Model',
-	idProperty  : 'cod_movimentacao_item',
+	idProperty  : 'id',
     fields: [
+    {
+       name : 'id',
+	   type: 'int'
+    }, 	
     {
        name : 'quantidade',
 	   type: 'int'

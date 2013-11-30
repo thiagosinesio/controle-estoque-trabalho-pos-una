@@ -1,9 +1,9 @@
 Ext.define('UNA.model.UnidadeMedida', {
     extend		: 'Ext.data.Model',
-	idProperty  : 'cod_unidade',		
+	idProperty  : 'id',		
     fields: [
     {
-       name : 'cod_unidade',
+       name : 'id',
 	   type: 'int'
     }, 
 	{
