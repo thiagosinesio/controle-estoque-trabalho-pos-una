@@ -1,4 +1,4 @@
-﻿1) Definir o banco de dados 
+1) Definir o banco de dados 
 2) Definir estrutura de pasta
 2) Definir o arquivo PHP
 4) Definir o arquivo de autenticação 

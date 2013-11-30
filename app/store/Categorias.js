@@ -8,7 +8,7 @@ Ext.define('UNA.store.Categorias', {
    //Create, update, destroy, read 
     proxy		: {
         simpleSortMode	: true,
-        type			: 'rest',			
+        type			: 'ajax',			
 			api         : {
 				read    : 'php/categorias.php?acao=list',
 				create  : 'php/categorias.php?acao=insert',		
