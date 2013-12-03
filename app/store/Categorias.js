@@ -13,13 +13,13 @@ Ext.define('UNA.store.Categorias', {
 				read    : 'http://www.services.ninjadevspace.com/estoqueservice/categorias/list',
 				create  : 'http://services.ninjadevspace.com/estoqueservice/categorias/save',		
 				update  : 'http://services.ninjadevspace.com/estoqueservice/categorias/update',						
-				destroy : 'php/categorias.php?acao=delete'			
+				destroy : 'http://services.ninjadevspace.com/estoqueservice/categorias/remove'			
 						  },
 		actionMethods 	: {
 				read	: 'GET',
 				create	: 'POST',
 				update	: 'POST',
-				destroy : 'POST'		
+				destroy : 'GET'		
 						  },  
 			reader		: {
 				type		: 'json',

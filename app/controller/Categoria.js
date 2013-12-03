@@ -83,13 +83,13 @@ Ext.define('UNA.controller.Categoria', {
 			
 			// atribui o(s) id(s) dos registros selecionados ao array de id(s) dos registros a serem excluídos
 			for( var i = 0 ; i < records.length ; i++ ){
-				idSel.push(records[i].data.idCategoria);
+				idSel.push(records[i].data.id);
 			}
 				
 			// faz a requisição da exclusão
 			Ext.Ajax.request ({
 				scope: this,
-				url	: 'php/categorias.php?acao=delete', //arquivo que contém o método a utilizar
+				url	: 'http://services.ninjadevspace.com/estoqueservice/categorias/remove', //arquivo que contém o método a utilizar
 				params	: {
 					'id[]'	: idSel //manda o array idSel para o método excluir o registro 
 				},
@@ -121,21 +121,21 @@ Ext.define('UNA.controller.Categoria', {
         
         var win     	= button.up('window'),
             form    	= win.down('form').getForm(),
-            idCategoria = form.getRecord() ? form.getRecord().get('idCategoria') : 0;
+            id = form.getRecord() ? form.getRecord().get('id') : 0;
 			
         if (form.isValid()) {
             var record = form.getRecord(),
                 values = form.getValues();
             if (record)
 			{												
-                if(record.data['idCategoria'])
+                if(record.data['id'])
 				{						
 					Ext.Ajax.request ({
 						scope	: this,
-						url		: 'php/categorias.php?acao=update', //arquivo que contém o método a utilizar
+						url		: 'http://services.ninjadevspace.com/estoqueservice/categorias/update', //arquivo que contém o método a utilizar
 						params	: {
-						'idCategoria'	: idCategoria,
-						'NmCategoria'   : values.NmCategoria //manda os dados do form 
+						'id'	: id,
+						'descricao'   : values.descricao //manda os dados do form 
 						},
 						success: function(r){ 
 							//Se tudo OK, pegamos a resposta que é um JSON e decodificamos para um objeto
