@@ -19,7 +19,7 @@ Ext.define('UNA.store.Categorias', {
 				read	: 'GET',
 				create	: 'POST',
 				update	: 'POST',
-				destroy : 'GET'		
+				destroy : 'POST'		
 						  },  
 			reader		: {
 				type		: 'json',
