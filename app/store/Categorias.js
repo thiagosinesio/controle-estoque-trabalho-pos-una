@@ -30,7 +30,7 @@ Ext.define('UNA.store.Categorias', {
             type			: 'json',
             writeAllFields	: true,
             encode			: true,
-            root			: 'data'
+            root			: 'categoria'
         },/*
 		extraParams: {             
             sort 	: 'idCategoria, NmCategoria',    
