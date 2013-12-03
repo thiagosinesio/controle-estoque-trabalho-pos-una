@@ -1,12 +1,12 @@
 Ext.define('UNA.model.TipoPessoa', {
 		extend		: 'Ext.data.Model',
-		idProperty  : 'cod_tipo_pessoa',				
+		idProperty  : 'id',				
 		fields :[{
-			name : 'cod_tipo_pessoa',
+			name : 'id',
 			type : 'int'		
 		},
 		{
-			name : 'tipo_pessoa',
+			name : 'tipo',
 			type : 'string'
 		}	
 		]

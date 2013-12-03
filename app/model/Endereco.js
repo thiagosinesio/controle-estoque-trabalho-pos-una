@@ -1,8 +1,8 @@
 Ext.define('UNA.model.Endereco', {
 		extend		: 'Ext.data.Model',
-		idProperty  : 'cod_endereco',				
+		idProperty  : 'id',				
 		fields :[{
-			name : 'cod_endereco',
+			name : 'id',
 			type : 'int'		
 		},
 		{
@@ -26,16 +26,17 @@ Ext.define('UNA.model.Endereco', {
 			type : 'string'
 		},
 		{
-			name : 'cod_cidade',
+			name : 'idCidade',
 			type : 'int'
 		},
 		{
-			name : 'cod_estado',
+			name : 'idEstado',
 			type : 'int'
 		},
 		{
-			name : 'cod_pais',
+			name : 'idPais',
 			type : 'int'
 		}						
 		]
 }); 
+

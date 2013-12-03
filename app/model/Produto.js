@@ -1,9 +1,9 @@
 Ext.define('UNA.model.Produto', {
     extend		: 'Ext.data.Model',
-	idProperty  : 'cod_produto',		
+	idProperty  : 'id',		
     fields: [
     {
-        name: 'cod_produto',
+        name: 'id',
         type: 'int'
     },
     {
@@ -11,36 +11,35 @@ Ext.define('UNA.model.Produto', {
         type: 'string'
     },
     {
-        name: 'estoque_minimo',
+        name: 'estoqueMinimo',
         type: 'int'
     },
     {
-        name: 'estoque_atual',
+        name: 'estoqueAtual',
         type: 'int'
     },
     {
-        name: 'estoque_maximo',
+        name: 'estoqueMaximo',
         type: 'int'
     },
     {
-        name: 'preco_compra',
+        name: 'precoCompra',
         type: 'float'
     },
     {
-        name: 'preco_venda',
+        name: 'precoVenda',
         type: 'float'
     },{
         name: 'status',
         type: 'string'
     },
     {
-        name: 'cod_categoria',
+        name: 'idCategoria',
         type: 'int'
     },
     {
-        name: 'cod_unidade_medida',
+        name: 'idUnidade',
         type: 'int'
     }           
     ]
 });
-

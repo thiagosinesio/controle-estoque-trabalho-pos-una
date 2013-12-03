@@ -7,16 +7,18 @@ Ext.define('UNA.model.Estado', {
 	   type: 'int'
     }, 
 	{
-     name : 'cod_pais',
+     name : 'idPais',
 	   type: 'int'
     },
 	{
-     name : 'estado_sigla',
+     name : 'sigla',
 	   type: 'string'
     }, 	
 	{
-     name : 'desc_estado',
+     name : 'descricao',
 	   type: 'string'
     }
     ]
 });
+
+

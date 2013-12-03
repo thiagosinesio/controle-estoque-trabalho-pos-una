@@ -1,22 +1,23 @@
 Ext.define('UNA.model.Movimentacao', {
 		extend		: 'Ext.data.Model',
-		idProperty  : 'cod_movimentacao',				
+		idProperty  : 'id',				
 		fields :[{
-			name : 'cod_movimentacao',
+			name : 'id',
 			type : 'int'		
 		},
 		{
-			name : 'data_movimentacao',
+			name : 'data',
 			type : 'date',
 			dateFormat: 'd/m/Y'
 		},
 		{
-			name : 'tipo_movimentacao',
+			name : 'idTipoMovimentacao',
 			type : 'int'
 		},
 		{
-			name : 'cod_pessoa',
+			name : 'idPessoa',
 			type : 'int'
 		}				
 		]
 }); 
+

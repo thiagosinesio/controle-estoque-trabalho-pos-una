@@ -7,11 +7,11 @@ Ext.define('UNA.model.Cidade', {
 	   type: 'int'
     }, 
 	{
-     name : 'cod_estado',
+     name : 'idEstado',
 	   type: 'int'
     },
 	{
-     name : 'desc_cidade',
+     name : 'descricao',
 	   type: 'string'
     }
     ]

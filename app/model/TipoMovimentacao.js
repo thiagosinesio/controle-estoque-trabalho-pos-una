@@ -13,4 +13,3 @@ Ext.define('UNA.model.TipoMovimentacao', {
     ]
 });
 
-

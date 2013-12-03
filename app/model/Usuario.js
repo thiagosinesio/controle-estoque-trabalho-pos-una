@@ -1,8 +1,8 @@
 Ext.define('UNA.model.Usuario', {
 		extend		: 'Ext.data.Model',
-		idProperty  : 'cod_usuario',				
+		idProperty  : 'id',				
 		fields :[{
-			name : 'cod_usuario',
+			name : 'id',
 			type : 'int'		
 		},
 		{

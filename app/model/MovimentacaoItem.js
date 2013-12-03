@@ -11,20 +11,17 @@ Ext.define('UNA.model.MovimentacaoItem', {
 	   type: 'int'
     }, 
     {
-       name : 'valor_unitario',
+       name : 'valorUnitario',
 	   type: 'float'
     },
 	{
-        name : 'movimentacao_id',
+        name : 'idMovimentacao',
 		type : 'int'
     },
     {
-        name : 'produto_id',
+        name : 'idProduto',
 		type : 'int'
     }
     ]
 });
-
-
-
 

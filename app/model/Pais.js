@@ -7,14 +7,13 @@ Ext.define('UNA.model.Pais', {
 	   type: 'int'
     }, 
 	{
-        name : 'sgl_pais',
+        name : 'sigla',
 		type : 'string'
     },
     {
-        name : 'desc_pais',
+        name : 'descricao',
 		type : 'string'
     }
     ]
 });
-
 
