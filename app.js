@@ -29,6 +29,7 @@ Ext.application({
         //'Administrador',
         'Categoria',
         'Produto',
+        'TipoPessoa',
         'UnidadeMedida'
         /*,
         'Cidade',
@@ -40,7 +41,6 @@ Ext.application({
         'Pais',
         'Produto',
         'TipoMovimentacao',
-        'TipoPessoa',
         'UnidadeMedida',
         'Usuario'*/
 

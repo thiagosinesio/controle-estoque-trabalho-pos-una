@@ -9,10 +9,10 @@ Ext.define('UNA.view.produto.List' ,{
     initComponent	: function(){
 
 		this.columns = [
-        Ext.create('Ext.grid.RowNumberer'),
-            {header: 'Código',  dataIndex: 'id',  flex: 1},
-            {header: 'Nome',  dataIndex: 'descricao',  flex: 1},  
-            {header: 'Categoria',  dataIndex: 'categoriaProduto.descricao',  flex: 1}        
+                    Ext.create('Ext.grid.RowNumberer'),
+                        {header: 'Código',  dataIndex: 'id',  flex: 1},
+                        {header: 'Nome',  dataIndex: 'descricao',  flex: 1},  
+                        {header: 'Categoria',  dataIndex: 'categoriaProduto.descricao',  flex: 1}        
 		]; 
 		
 		this.dockedItems = [{
