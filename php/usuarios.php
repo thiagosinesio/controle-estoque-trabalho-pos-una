@@ -9,16 +9,16 @@ if($arrDados["acao"]=="insert")
 	$arrDados['data'] = str_replace("\\","",$arrDados['data']);
     $data 			= json_decode(utf8_encode($arrDados['data']));	    
 	
-	$strNome 	= mysql_escape_string($data->{'NmUsuario'}); 
-	$strEmail 	= mysql_escape_string($data->{'DsEmail'}); 
-	$strSenha 	= mysql_escape_string($data->{'DsSenha'}); 
+	$strNome 	= mysql_escape_string($data->{'login'}); 
+	$strStatus 	= mysql_escape_string($data->{'status'}); 
+	$strSenha 	= mysql_escape_string($data->{'password'}); 
 	
-	$strSQL = "INSERT INTO teusuario (NmUsuario, DsEmail, DsSenha) VALUES ('".$strNome."','".$strEmail."','".$strSenha."')";
+	$strSQL = "INSERT INTO USUARIO (LOGIN, STATUS, PASSWORD) VALUES ('".$strNome."','".$strStatus."','".$strSenha."')";
 	
 	if(mysql_query($strSQL))
 	{
 
-		$data->{'idUsuario'} 	   	= mysql_insert_id(); 
+		$data->{'id'} 	   	= mysql_insert_id(); 
 
 		$arrMessage['success'] 		= true; 
 		$arrMessage['message'] 		= "Registro salvo com sucesso!";
@@ -41,7 +41,7 @@ else if($arrDados["acao"]=="update")
 	$strEmail 	= mysql_escape_string($data->{'DsEmail'}); 
 	$strSenha 	= mysql_escape_string($data->{'DsSenha'}); 
 
-	$strSQL = "UPDATE teusuario SET NmUsuario = '".$strNome."', DsEmail = '".$strEmail."', DsSenha = '".$strSenha."' WHERE idUsuario = '".$idUsuario."' ";
+	$strSQL = "UPDATE USUARIO SET NmUsuario = '".$strNome."', DsEmail = '".$strEmail."', DsSenha = '".$strSenha."' WHERE idUsuario = '".$idUsuario."' ";
 	if(mysql_query($strSQL))
 	{
 		$arrMessage['success'] 						= true; 
@@ -57,14 +57,14 @@ else if($arrDados["acao"]=="update")
 }
 else if($arrDados["acao"]=="delete")
 {
-    $arrUsuarios = json_decode($_POST['data']);
+    $arrUsuarios = json_decode($_POST['usuario']);
 	
 	if (is_array($arrUsuarios)) 
 	{
       foreach ($arrUsuarios as $usuario) 
 	   {
-                $idUsuario 	= mysql_real_escape_string($usuario->idUsuario);
-				$strSQL 	= "DELETE FROM teusuario WHERE idUsuario = '".$idUsuario."'"; 
+                $idUsuario 	= mysql_real_escape_string($usuario->id);
+				$strSQL 	= "DELETE FROM USUARIO WHERE COD_USUARIO = '".$idUsuario."'"; 
                 if(!mysql_query($strSQL))
 				{
 					break;	
@@ -74,7 +74,7 @@ else if($arrDados["acao"]=="delete")
 	 else 
 	 {
             $idUsuario  = $arrUsuarios->idUsuario;
-           	$strSQL 	= "DELETE FROM teusuario WHERE idUsuario = '".$idUsuario."'"; 			
+           	$strSQL 	= "DELETE FROM USUARIO WHERE COD_USUARIO = '".$idUsuario."'"; 			
             mysql_query($strSQL);
      }
 
@@ -90,7 +90,8 @@ else
         $dir 	= $arrDados['dir']  ? $arrDados['dir']  : 'ASC';
         $order 	= $sort . ' ' . $dir;
         
-        $strSQL = "SELECT idUsuario, NmUsuario, DsEmail, DsSenha FROM teusuario ORDER BY ".mysql_real_escape_string($order);
+        $strSQL = "SELECT COD_USUARIO AS id, LOGIN AS login, PASSWORD AS password, STATUS AS status FROM USUARIO "
+                . "ORDER BY ".mysql_real_escape_string($order);
         
         if($arrDados["start"] !== null && $arrDados["start"] !== 'start' && $arrDados["limit"] !== null && $arrDados["limit"] !== 'limit')
 		{
@@ -111,13 +112,13 @@ else
 		}		        
 		
 		        
-        $strSQL 	= "SELECT COUNT(*) AS total FROM teusuario";
+        $strSQL 	= "SELECT COUNT(*) AS total FROM USUARIO";
         $total 		= mysql_fetch_array(mysql_query($strSQL));
 
         echo json_encode(array(
             "data" => $arrBanco,
             "success" => true,
-			"inicio" => $inicio,
+            "inicio" => $inicio,
             "total" => $total['total']
 			
         ));

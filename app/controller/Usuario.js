@@ -53,7 +53,7 @@ Ext.define('UNA.controller.Usuario', {
     
     insert: function(btn, evt, opt) {
         var view = Ext.widget('usuarioEdit');
-        view.setTitle('Novo usu·rio');
+        view.setTitle('Novo usu√°rio');
     },
     
     destroy: function() {
@@ -63,13 +63,13 @@ Ext.define('UNA.controller.Usuario', {
 
         if(records.length === 0)
 		{
-            Ext.Msg.alert('AtenÁ„o', 'Nenhum registro selecionado');
+            Ext.Msg.alert('Aten√ß√£o', 'Nenhum registro selecionado');
             return false;
         }
 		else
 		{
             Ext.Msg.show({
-                title 	: 'ConfirmaÁ„o',
+                title 	: 'Confirma√ß√£o',
                 msg 	: 'Tem CERTEZA que deseja deletar o(s) registro(s) selecionado(s)?',
                 buttons : Ext.Msg.YESNO,
                 icon 	: Ext.MessageBox.WARNING,
@@ -121,7 +121,7 @@ Ext.define('UNA.controller.Usuario', {
 		else
 		{
             Ext.ux.Msg.flash({
-                msg: 'H· campos preenchidos incorretamente',
+                msg: 'H√° campos preenchidos incorretamente',
                 type: 'error'
         });
             
@@ -144,4 +144,4 @@ Ext.define('UNA.controller.Usuario', {
         }		
     }
 
-});
+}); 

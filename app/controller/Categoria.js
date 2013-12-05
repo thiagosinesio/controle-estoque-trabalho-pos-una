@@ -132,7 +132,7 @@ Ext.define('UNA.controller.Categoria', {
 				{						
 					Ext.Ajax.request ({
 						scope	: this,
-						url		: 'http://services.ninjadevspace.com/estoqueservice/categorias/update', //arquivo que contém o método a utilizar
+						url		: 'http://estoque.ninjadevspace.com/estoqueservice/categorias/update', //arquivo que contém o método a utilizar
 						params	: {
 						'id'	: id,
 						'descricao'   : values.descricao //manda os dados do form 

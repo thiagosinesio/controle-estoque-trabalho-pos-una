@@ -10,9 +10,9 @@ Ext.define('UNA.store.Categorias', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'http://www.services.ninjadevspace.com/estoqueservice/categorias/list',
+				read    : 'http://www.estoque.ninjadevspace.com/estoqueservice/categorias/list',
 				create  : 'php/categorias.php?acao=insert',		
-				update  : 'http://services.ninjadevspace.com/estoqueservice/categorias/update',						
+				update  : 'http://estoque.ninjadevspace.com/estoqueservice/categorias/update',						
 				destroy : 'php/categorias.php?acao=delete'			
 						  },
 		actionMethods 	: {

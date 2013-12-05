@@ -4,7 +4,7 @@ Ext.define('UNA.view.usuario.List' ,{
     extend          : 'UNA.view.AbstractList',
     alias           : 'widget.usuarioList',
     store           : 'Usuarios',
-    title           : 'Lista de Usuarios',         
+    title           : 'Lista de Usuários',         
     selModel        : Ext.create('Ext.selection.CheckboxModel'),
     initComponent   : function(){
 
