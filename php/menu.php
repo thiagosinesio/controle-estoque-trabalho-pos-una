@@ -24,24 +24,9 @@ $menu = "{
                                 itemMenu: 'categoriaList'
                             },
                             {
-                                text:'Cidade',
-                                leaf:true,
-                                itemMenu: 'cidadeList'
-                            },
-                            {
                                 text:'Cliente',
                                 leaf:true,
                                 itemMenu: 'clienteList'
-                            },
-                            {
-                                text:'Endereço',
-                                leaf:true,
-                                itemMenu: 'enderecoList'
-                            },
-                            {
-                                text:'Estado',
-                                leaf:true,
-                                itemMenu: 'estadoList'
                             },
                             {
                                 text:'Fornecedor',
@@ -52,11 +37,6 @@ $menu = "{
                                 text:'Movimentação',
                                 leaf:true,
                                 itemMenu: 'movimentacaoList'
-                            },
-                            {
-                                text:'País',
-                                leaf:true,
-                                itemMenu: 'paisList'
                             },
                             {
                                 text:'Produto',

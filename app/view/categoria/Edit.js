@@ -12,7 +12,7 @@ Ext.define('UNA.view.categoria.Edit', {
             xtype: 'abstractform',
             items: [{
                         name : 'descricao',
-                        fieldLabel: 'Descrição'				
+                        fieldLabel: 'Descrição'		
 					}			
 			]}
         ];
