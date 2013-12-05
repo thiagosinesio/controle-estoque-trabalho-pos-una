@@ -30,13 +30,13 @@ Ext.application({
         'Categoria',
         'Produto',
         'TipoPessoa',
-        'UnidadeMedida'
+        'UnidadeMedida',
+        'Usuario'
         /*
         'Cliente',
         'Fornecedor',
         'Movimentacao',
-        'TipoMovimentacao',
-        'Usuario'*/
+        'TipoMovimentacao*/
 
     ],    
     autoCreateViewport: true,
