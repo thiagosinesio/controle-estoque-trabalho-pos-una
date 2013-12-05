@@ -40,6 +40,14 @@ Ext.define('UNA.model.Produto', {
     {
         name: 'idUnidade',
         type: 'int'
+    },
+    {
+        name: 'categoriaProduto',
+        type: 'string'
+    },
+    {
+        name: 'medidaProduto',
+        type: 'string'
     }           
     ]
 });

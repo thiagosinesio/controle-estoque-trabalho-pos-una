@@ -11,7 +11,7 @@ if($arrDados["acao"]=="insert")
 	$tipo 	= mysql_escape_string($data->{'tipo'}); 		
 	
 	$strSQL = "INSERT INTO TIPO_PESSOA (TIPO_PESSOA) VALUES ('".$tipo."')";
-	
+        
 	if(mysql_query($strSQL))
 	{
 		

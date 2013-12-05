@@ -18,8 +18,8 @@ Ext.define('UNA.view.produto.List' ,{
                         {header: 'Preço Compra',  dataIndex: 'precoCompra',  flex: 1, renderer: Ext.util.Format.usMoney },  
                         {header: 'Preço Venda',  dataIndex: 'precoVenda',  flex: 1, renderer: Ext.util.Format.usMoney},
                         {header: 'Status',  dataIndex: 'status',  flex: 1}, 
-                        {header: 'Categoria',  dataIndex: 'categoriaProduto.descricao',  flex: 1},
-                        {header: 'Unidade de Medida',  dataIndex: 'descricao',  flex: 1}   
+                        {header: 'Categoria',  dataIndex: 'categoriaProduto',  flex: 1},
+                        {header: 'Unidade de Medida',  dataIndex: 'medidaProduto',  flex: 1}   
 		]; 
 		
 		this.dockedItems = [{

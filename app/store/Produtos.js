@@ -10,10 +10,10 @@ Ext.define('UNA.store.Produtos', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'http://services.ninjadevspace.com/estoqueservice/produtos/list',
-				create  : 'http://services.ninjadevspace.com/estoqueservice/produtos/save',		
-				update  : 'http://services.ninjadevspace.com/estoqueservice/categorias/update',						
-				destroy : 'http://services.ninjadevspace.com/estoqueservice/categorias/remove'			
+				read    : 'php/produtos.php?acao=list',
+				create  : 'php/produtos.php?acao=insert',		
+				update  : 'http://estoque.ninjadevspace.com/estoqueservice/categorias/update',						
+				destroy : 'php/produtos.php?acao=delete'			
 						  },
 		actionMethods 	: {
 				read	: 'GET',
@@ -31,11 +31,11 @@ Ext.define('UNA.store.Produtos', {
             writeAllFields	: true,
             encode			: true,
             root			: 'produto'
-        },/*
+        },
 		extraParams: {             
-            sort 	: 'idProduto, NmProduto',    
+            sort 	: 'COD_PRODUTO, DESCRICAO',    
             dir 	: 'ASC'            
-        }, */
+        },
         listeners: {
             exception: function(proxy, response, operation){
                 Ext.MessageBox.show({

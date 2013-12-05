@@ -89,7 +89,7 @@ Ext.define('UNA.controller.Produto', {
 			// faz a requisição da exclusão
 			Ext.Ajax.request ({
 				scope: this,
-				url	: 'http://services.ninjadevspace.com/estoqueservice/produtos/remove', //arquivo que contém o método a utilizar
+				url	: 'http://estoque.ninjadevspace.com/estoqueservice/produtos/remove', //arquivo que contém o método a utilizar
 				params	: {
 					'id[]'	: idSel //manda o array idSel para o método excluir o registro 
 				},
@@ -132,7 +132,7 @@ Ext.define('UNA.controller.Produto', {
 				{						
 					Ext.Ajax.request ({
 						scope	: this,
-						url		: 'http://services.ninjadevspace.com/estoqueservice/produtos/update', //arquivo que contém o método a utilizar
+						url		: 'http://estoque.ninjadevspace.com/estoqueservice/produtos/update', //arquivo que contém o método a utilizar
 						params	: {
 						'id'	: id,
 						'descricao'   : values.descricao //manda os dados do form 
