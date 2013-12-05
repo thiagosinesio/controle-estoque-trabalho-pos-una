@@ -17,7 +17,7 @@ Ext.define('UNA.controller.TipoPessoa', {
     {
         ref:'tipoPessoaList', 
         selector:'tipoPessoaList'
-    }
+    } 
     ],
 
     init: function() {
@@ -89,7 +89,7 @@ Ext.define('UNA.controller.TipoPessoa', {
 			// faz a requisição da exclusão
 			Ext.Ajax.request ({
 				scope: this,
-				url	: 'http://services.ninjadevspace.com/estoqueservice/tipoPessoas/remove', //arquivo que contém o método a utilizar
+				url	: 'php/tiposPessoa.php?acao=delete', //arquivo que contém o método a utilizar
 				params	: {
 					'id[]'	: idSel //manda o array idSel para o método excluir o registro 
 				},
@@ -132,7 +132,7 @@ Ext.define('UNA.controller.TipoPessoa', {
 				{						
 					Ext.Ajax.request ({
 						scope	: this,
-						url		: 'http://services.ninjadevspace.com/estoqueservice/tipoPessoas/update', //arquivo que contém o método a utilizar
+						url		: 'http://estoque.ninjadevspace.com/estoqueservice/tipoPessoas/update', //arquivo que contém o método a utilizar
 						params	: {
 						'id'	: id,
 						'descricao'   : values.descricao //manda os dados do form 

@@ -14,7 +14,7 @@ Ext.define('UNA.store.Usuarios', {
 				destroy : 'php/usuarios.php?acao=delete'			
 			},
 		actionMethods : {
-				create : 'GET',
+				create : 'POST',
 				read   : 'POST',
 				update : 'POST',
 				destroy: 'POST' 		

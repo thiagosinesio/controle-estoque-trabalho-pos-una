@@ -10,10 +10,10 @@ Ext.define('UNA.store.TiposPessoa', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'http://www.services.ninjadevspace.com/estoqueservice/categorias/list',
-				create  : 'http://services.ninjadevspace.com/estoqueservice/categorias/save',		
-				update  : 'http://services.ninjadevspace.com/estoqueservice/categorias/update',						
-				destroy : 'http://services.ninjadevspace.com/estoqueservice/categorias/remove'			
+				read    : 'http://www.estoque.ninjadevspace.com/estoqueservice/categorias/list',
+				create  : 'php/tiposPessoa.php?acao=insert',		
+				update  : 'http://estoque.ninjadevspace.com/estoqueservice/categorias/update',						
+				destroy : 'php/tiposPessoa.php?acao=delete'			
 						  },
 		actionMethods 	: {
 				read	: 'GET',
@@ -23,19 +23,19 @@ Ext.define('UNA.store.TiposPessoa', {
 						  },  
 			reader		: {
 				type		: 'json',
-				root		: 'categoria',
+				root		: 'tipoPessoa',
             successProperty	: 'success'
         },
 		writer			: {
             type			: 'json',
             writeAllFields	: true,
             encode			: true,
-            root			: 'categoria'
-        },/*
+            root			: 'tipoPessoa'
+        },
 		extraParams: {             
-            sort 	: 'idTipoPessoa, NmTipoPessoa',    
+            sort 	: 'id, tipo',    
             dir 	: 'ASC'            
-        }, */
+        },
         listeners: {
             exception: function(proxy, response, operation){
                 Ext.MessageBox.show({
