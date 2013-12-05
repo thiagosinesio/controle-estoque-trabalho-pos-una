@@ -1,10 +1,10 @@
 Ext.require(['UNA.view.AbstractForm']);
 Ext.require(['UNA.view.AbstractWindow']);
 
-Ext.define('UNA.view.categoria.Edit', {
+Ext.define('UNA.view.produto.Edit', {
     extend: 'UNA.view.AbstractWindow',
-    alias : 'widget.categoriaEdit',
-    title : 'Edição de Categoria',
+    alias : 'widget.produtoEdit',
+    title : 'Edição de Produto',
 
     initComponent: function() {
     	
