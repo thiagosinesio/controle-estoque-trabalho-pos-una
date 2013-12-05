@@ -31,17 +31,11 @@ Ext.application({
         'Produto',
         'TipoPessoa',
         'UnidadeMedida'
-        /*,
-        'Cidade',
+        /*
         'Cliente',
-        'Endereco',
-        'Estado',
         'Fornecedor',
         'Movimentacao',
-        'Pais',
-        'Produto',
         'TipoMovimentacao',
-        'UnidadeMedida',
         'Usuario'*/
 
     ],    

@@ -16,32 +16,28 @@ Ext.define('UNA.view.produto.Edit', {
                         fieldLabel: 'Nome'				
 					},
                     {
-                        name : 'descricao',
+                        name : 'estoqueMinimo',
                         fieldLabel: 'Estoque Mínimo'             
                     },  
                     {
-                        name : 'descricao',
+                        name : 'estoqueAtual',
                         fieldLabel: 'Estoque Atual'             
                     },  
                     {
-                        name : 'descricao',
+                        name : 'estoqueMaximo',
                         fieldLabel: 'Estoque Máximo'             
                     },  
                     {
-                        name : 'descricao',
+                        name : 'precoCompra',
                         fieldLabel: 'Preço Compra'             
                     },  
                     {
-                        name : 'descricao',
+                        name : 'precoVenda',
                         fieldLabel: 'Preço Venda'             
                     },  
                     {
-                        name : 'descricao',
+                        name : 'status',
                         fieldLabel: 'Status'             
-                    },  
-                    {
-                        name : 'descricao',
-                        fieldLabel: 'Descrição'             
                     },
                     {
                         xtype: 'categoriaCombo'

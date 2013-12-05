@@ -12,12 +12,12 @@ Ext.define('UNA.view.produto.List' ,{
                     Ext.create('Ext.grid.RowNumberer'),
                         {header: 'Código',  dataIndex: 'id',  flex: 1},
                         {header: 'Nome',  dataIndex: 'descricao',  flex: 1},   
-                        {header: 'Estoque Mínimo',  dataIndex: 'id',  flex: 1},
-                        {header: 'Estoque Atual',  dataIndex: 'descricao',  flex: 1},  
-                        {header: 'Estoque Máximo',  dataIndex: 'id',  flex: 1},
-                        {header: 'Preço Compra',  dataIndex: 'descricao',  flex: 1},  
-                        {header: 'Preço Venda',  dataIndex: 'id',  flex: 1},
-                        {header: 'Status',  dataIndex: 'descricao',  flex: 1}, 
+                        {header: 'Estoque Mínimo',  dataIndex: 'estoqueMinimo',  flex: 1},
+                        {header: 'Estoque Atual',  dataIndex: 'estoqueAtual',  flex: 1},  
+                        {header: 'Estoque Máximo',  dataIndex: 'estoqueMaximo',  flex: 1},
+                        {header: 'Preço Compra',  dataIndex: 'precoCompra',  flex: 1, renderer: Ext.util.Format.usMoney },  
+                        {header: 'Preço Venda',  dataIndex: 'precoVenda',  flex: 1},
+                        {header: 'Status',  dataIndex: 'status',  flex: 1}, 
                         {header: 'Categoria',  dataIndex: 'categoriaProduto.descricao',  flex: 1},
                         {header: 'Unidade de Medida',  dataIndex: 'descricao',  flex: 1}   
 		]; 
