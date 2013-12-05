@@ -1,6 +1,7 @@
 Ext.require(['UNA.view.AbstractForm']);
 Ext.require(['UNA.view.AbstractWindow']);
-Ext.require(['UNA.view.produto.Combo']);
+Ext.require(['UNA.view.produto.ComboCategoria']);
+Ext.require(['UNA.view.produto.ComboUnidadeMedida']);
 
 Ext.define('UNA.view.produto.Edit', {
     extend: 'UNA.view.AbstractWindow',
