@@ -89,7 +89,7 @@ Ext.define('UNA.controller.Categoria', {
 			// faz a requisição da exclusão
 			Ext.Ajax.request ({
 				scope: this,
-				url	: 'http://services.ninjadevspace.com/estoqueservice/categorias/remove', //arquivo que contém o método a utilizar
+				url	: 'php/categorias.php?acao=delete', //arquivo que contém o método a utilizar
 				params	: {
 					'id[]'	: idSel //manda o array idSel para o método excluir o registro 
 				},

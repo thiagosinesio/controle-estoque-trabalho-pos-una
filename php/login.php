@@ -11,18 +11,18 @@ $_SESSION["NmUsuario"]			= "";
 
 if($arrDados["acao"]=="login")
 {
-	$strSQL = "SELECT idUsuario, NmUsuario FROM teusuario WHERE 
-			   DsEmail = '" . mysql_real_escape_string($arrDados["email"]) . "' 
+	$strSQL = "SELECT COD_USUARIO AS id, LOGIN AS login FROM USUARIO WHERE 
+			   LOGIN = '" . mysql_real_escape_string($arrDados["email"]) . "' 
 			   AND 
-			   DsSenha = '" . mysql_real_escape_string($arrDados["senha"]) . "' 	
+			   PASSWORD = '" . mysql_real_escape_string($arrDados["senha"]) . "' 	
 			   ";    	
 	$objRow = mysql_fetch_array(mysql_query($strSQL));
 
-	if($objRow["idUsuario"]<>"")	
+	if($objRow["id"]<>"")	
 	{
 		$arrRetorno["success"] = true; 
-		$_SESSION["idUsuario"]			= $objRow["idUsuario"]; 
-		$_SESSION["NmUsuario"]			= $objRow["NmUsuario"]; 
+		$_SESSION["idUsuario"]			= $objRow["id"]; 
+		$_SESSION["NmUsuario"]			= $objRow["login"]; 
 		unset($arrRetorno["erro"]);
 	}
 }

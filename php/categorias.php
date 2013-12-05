@@ -3,22 +3,22 @@
 require_once 'conexao.php';
 $arrDados 	= $_REQUEST; 
 $arrMessage = array(); 
-
+//var_dump($_REQUEST);
 if($arrDados["acao"]=="insert")
 {
-	$arrDados['data'] = str_replace("\\","",$arrDados['data']);
-    $data 			= json_decode(utf8_encode($arrDados['data']));	    
-	$strNome 	= mysql_escape_string($data->{'NmCategoria'}); 		
+	$arrDados['categoria'] = str_replace("\\","",$arrDados['categoria']);
+    $data 			= json_decode(utf8_encode($arrDados['categoria']));	 
+	$strNome 	= mysql_escape_string($data->{'descricao'}); 		
 	
-	$strSQL = "INSERT INTO tecategoria (NmCategoria) VALUES ('".$strNome."')";
+	$strSQL = "INSERT INTO CATEGORIA (DESCRICAO) VALUES ('".$strNome."')";
 	
 	if(mysql_query($strSQL))
 	{
 		
-		$data->{'idCategoria'} 	   	= mysql_insert_id(); 
+		$data->{'id'} 	   	= mysql_insert_id(); 
 		$arrMessage['success'] 		= true; 
 		$arrMessage['message'] 		= "Registro salvo com sucesso!";
-		$arrMessage['data']    		= $data;		
+		$arrMessage['categoria']    		= $data;		
 	}
 	else
 	{
@@ -51,11 +51,11 @@ else if($arrDados["acao"]=="update")
 else if($arrDados["acao"]=="delete")
 {	
     $arrCategorias = $arrDados["id"];
-	
+	//var_dump($arrDados['id']);
 	for($i=0;$i<count($arrCategorias);$i++)
 	{
        $idCategoria = mysql_real_escape_string($arrCategorias[$i]);
-	   $strSQL 	 	= "DELETE FROM tecategoria WHERE idCategoria = '".$idCategoria."'"; 
+	   $strSQL 	 	= "DELETE FROM CATEGORIA WHERE COD_CATEGORIA = '".$idCategoria."'"; 
                 if(!mysql_query($strSQL))
 				{
 						echo json_encode(array(
@@ -101,7 +101,7 @@ else
         $total 		= mysql_fetch_array(mysql_query($strSQL));
 
         echo json_encode(array(
-            "data" => $arrBanco,
+            "categoria" => $arrBanco,
             "success" => true,
 			"inicio" => $inicio,
             "total" => $total['total']			
