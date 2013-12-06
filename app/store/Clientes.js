@@ -10,9 +10,9 @@ Ext.define('UNA.store.Clientes', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'http://www.estoque.ninjadevspace.com/estoqueservice/clientes/list',
+				read    : 'estoqueservice/clientes/list',
 				create  : 'php/clientes.php?acao=insert',		
-				update  : 'http://estoque.ninjadevspace.com/estoqueservice/clientes/update',						
+				update  : 'estoqueservice/clientes/update',						
 				destroy : 'php/clientes.php?acao=delete'			
 						  },
 		actionMethods 	: {

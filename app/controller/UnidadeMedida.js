@@ -89,7 +89,7 @@ Ext.define('UNA.controller.UnidadeMedida', {
             // faz a requisição da exclusão
             Ext.Ajax.request ({
                 scope: this,
-                url : 'http://estoque.ninjadevspace.com/estoqueservice/unidadeMedidas/remove', //arquivo que contém o método a utilizar
+                url : 'php/unidadesMedida.php?acao=delete', //arquivo que contém o método a utilizar
                 params  : {
                     'id[]'  : idSel //manda o array idSel para o método excluir o registro 
                 },
@@ -132,7 +132,7 @@ Ext.define('UNA.controller.UnidadeMedida', {
                 {                       
                     Ext.Ajax.request ({
                         scope   : this,
-                        url     : 'http://services.ninjadevspace.com/estoqueservice/medidas/update', //arquivo que contém o método a utilizar
+                        url     : 'estoqueservice/medidas/update', //arquivo que contém o método a utilizar
                         params  : {
                         'id'    : id,
                         'unidade'   : values.unidade //manda os dados do form 

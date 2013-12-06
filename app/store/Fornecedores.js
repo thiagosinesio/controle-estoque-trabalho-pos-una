@@ -10,9 +10,9 @@ Ext.define('UNA.store.Fornecedores', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'http://www.estoque.ninjadevspace.com/estoqueservice/fornecedores/list',
+				read    : 'estoqueservice/fornecedores/list',
 				create  : 'php/fornecedores.php?acao=insert',		
-				update  : 'http://estoque.ninjadevspace.com/estoqueservice/fornecedores/update',						
+				update  : 'estoqueservice/fornecedores/update',						
 				destroy : 'php/fornecedores.php?acao=delete'			
 						  },
 		actionMethods 	: {

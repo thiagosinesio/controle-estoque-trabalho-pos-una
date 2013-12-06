@@ -10,9 +10,9 @@ Ext.define('UNA.store.TiposPessoa', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'http://www.estoque.ninjadevspace.com/estoqueservice/categorias/list',
+				read    : 'php/tiposPessoa.php?acao=list',
 				create  : 'php/tiposPessoa.php?acao=insert',		
-				update  : 'http://estoque.ninjadevspace.com/estoqueservice/categorias/update',						
+				update  : 'php/tiposPessoa.php?acao=update',						
 				destroy : 'php/tiposPessoa.php?acao=delete'			
 						  },
 		actionMethods 	: {
@@ -33,7 +33,7 @@ Ext.define('UNA.store.TiposPessoa', {
             root			: 'tipoPessoa'
         },
 		extraParams: {             
-            sort 	: 'id, tipo',    
+            sort 	: 'COD_TIPO_PESSOA',    
             dir 	: 'ASC'            
         },
         listeners: {

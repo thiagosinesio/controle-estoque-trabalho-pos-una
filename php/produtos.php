@@ -21,9 +21,9 @@ if($arrDados["acao"]=="insert")
         $precoVenda 	= mysql_escape_string($data->{'precoVenda'});
         $status 	= mysql_escape_string($data->{'status'});
         $idCat          = mysql_escape_string($data->{'idCategoria'});
-        $idUnidade 	= mysql_escape_string($data->{'tipo'});
+        $idUnidade 	= mysql_escape_string($data->{'idUnidade'});
         
-	$strSQL = "INSERT INTO PRODUTO (PRODUTO.DESCRICAO, ESTOQUE_MINIMO, 
+        $strSQL = "INSERT INTO PRODUTO (PRODUTO.DESCRICAO, ESTOQUE_MINIMO, 
                     ESTOQUE_ATUAL, ESTOQUE_MAXIMO, PRECO_COMPRA, PRECO_VENDA, STATUS, COD_CATEGORIA, 
                     COD_UNIDADE_MEDIDA) VALUES ('".$descricao."', '".$estoqMin."', '".$estoqAtual."',"
                 . "'".$estoqMax."', '".$precoCompra."', '".$precoVenda."', '".$status."', "
@@ -33,6 +33,19 @@ if($arrDados["acao"]=="insert")
 	{
 		
 		$data->{'id'} 	   	= mysql_insert_id(); 
+		
+		/*echo $SQLCat = "SELECT DESCRICAO FROM CATEGORIA WHERE COD_CATEGORIA = ".$idCat;
+		$objCat = mysql_query($SQLCat);
+		//var_dump($objCat);
+		//$data->{'categoriaProduto'} = mysql_fetch_assoc ($objCat);
+		$teste = mysql_fetch_assoc ($objCat);
+		var_dump(mysql_fetch_assoc ($teste));	
+		
+		
+		$SQLUnidade = "SELECT UNIDADE FROM UNIDADE_MEDIDA WHERE COD_UNIDADE = ".$idUnidade;
+		$objUni = mysql_query($SQLUnidade);
+		$data->{'medidaProduto'} = mysql_fetch_assoc ($objUni);		*/
+		
 		$arrMessage['success'] 		= true; 
 		$arrMessage['message'] 		= "Registro salvo com sucesso!";
 		$arrMessage['produto']    		= $data;		

@@ -132,10 +132,10 @@ Ext.define('UNA.controller.TipoPessoa', {
 				{						
 					Ext.Ajax.request ({
 						scope	: this,
-						url		: 'http://estoque.ninjadevspace.com/estoqueservice/tipoPessoas/update', //arquivo que contém o método a utilizar
+						url		: 'php/tiposPessoa.php?acao=update', //arquivo que contém o método a utilizar
 						params	: {
 						'id'	: id,
-						'descricao'   : values.descricao //manda os dados do form 
+						'tipo'   : values.tipo //manda os dados do form 
 						},
 						success: function(r){ 
 							//Se tudo OK, pegamos a resposta que é um JSON e decodificamos para um objeto

@@ -31,10 +31,10 @@ if($arrDados["acao"]=="insert")
 }
 else if($arrDados["acao"]=="update")
 {
-	$id 	= mysql_escape_string($arrDados['idCategoria']); 
-	$strNome 		= mysql_escape_string($arrDados['NmCategoria']); 	
+	$id 	= mysql_escape_string($arrDados['id']); 
+	$strNome 		= mysql_escape_string($arrDados['tipo']); 	
 
-	$strSQL = "UPDATE TIPO_PESSOA SET NmCategoria = '".$strNome."' WHERE COD_TIPO_PESSOA = '".$id."' ";
+	$strSQL = "UPDATE TIPO_PESSOA SET TIPO_PESSOA = '".$strNome."' WHERE COD_TIPO_PESSOA = '".$id."' ";
 	if(mysql_query($strSQL))
 	{
 		$arrMessage['success'] 	= true; 
@@ -76,7 +76,7 @@ else
         $dir 	= $arrDados['dir']  ? $arrDados['dir']  : 'ASC';
         $order 	= $sort . ' ' . $dir;
         
-        $strSQL = "SELECT COD_TIPO_PESSOA, NmCategoria FROM TIPO_PESSOA ORDER BY ".mysql_real_escape_string($order);
+        $strSQL = "SELECT COD_TIPO_PESSOA AS id, TIPO_PESSOA AS tipo FROM TIPO_PESSOA ORDER BY ".mysql_real_escape_string($order);
         
         if($arrDados["start"] !== null && $arrDados["start"] !== 'start' && $arrDados["limit"] !== null && $arrDados["limit"] !== 'limit')
 		{
@@ -101,7 +101,7 @@ else
         $total 		= mysql_fetch_array(mysql_query($strSQL));
 
         echo json_encode(array(
-            "categoria" => $arrBanco,
+            "tipoPessoa" => $arrBanco,
             "success" => true,
 			"inicio" => $inicio,
             "total" => $total['total']			

@@ -12,7 +12,7 @@ Ext.define('UNA.store.Produtos', {
 			api         : {
 				read    : 'php/produtos.php?acao=list',
 				create  : 'php/produtos.php?acao=insert',		
-				update  : 'http://estoque.ninjadevspace.com/estoqueservice/categorias/update',						
+				update  : 'estoqueservice/categorias/update',						
 				destroy : 'php/produtos.php?acao=delete'			
 						  },
 		actionMethods 	: {

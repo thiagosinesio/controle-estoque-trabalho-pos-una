@@ -6,14 +6,14 @@ Ext.define('UNA.store.UnidadesMedidas', {
     pageSize    : 10,
    autoLoad     : {start: 0, limit: 10},
    //Create, update, destroy, read 
-    proxy       : {
+    proxy       : { 
         simpleSortMode  : true,
         type            : 'ajax',           
             api         : {
-                read    : 'http://services.ninjadevspace.com/estoqueservice/medidas/list',
-                create  : 'http://services.ninjadevspace.com/estoqueservice/categorias/save',       
-                update  : 'http://services.ninjadevspace.com/estoqueservice/categorias/update',                     
-                destroy : ''          
+				read    : 'estoqueservice/medidas/list',
+				create  : 'php/unidadesMedida.php?acao=insert',		
+				update  : 'estoqueservice/medidas/update',						
+				destroy : 'php/unidadesMedida.php?acao=delete'	
                           },
         actionMethods   : {
                 read    : 'GET',

@@ -10,9 +10,9 @@ Ext.define('UNA.store.Administradores', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'http://www.estoque.ninjadevspace.com/estoqueservice/administradores/list',
+				read    : 'estoqueservice/administradores/list',
 				create  : 'php/administradores.php?acao=insert',		
-				update  : 'http://estoque.ninjadevspace.com/estoqueservice/administradores/update',						
+				update  : 'estoqueservice/administradores/update',						
 				destroy : 'php/administradores.php?acao=delete'			
 						  },
 		actionMethods 	: {

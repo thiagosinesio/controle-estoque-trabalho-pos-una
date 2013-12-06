@@ -6,8 +6,8 @@ $arrMessage = array();
 
 if($arrDados["acao"]=="insert")
 {
-	$arrDados['data'] = str_replace("\\","",$arrDados['data']);
-    $data 			= json_decode(utf8_encode($arrDados['data']));	    
+	$arrDados['usuario'] = str_replace("\\","",$arrDados['usuario']);
+    $data 			= json_decode(utf8_encode($arrDados['usuario']));	    
 	
 	$strNome 	= mysql_escape_string($data->{'login'}); 
 	$strStatus 	= mysql_escape_string($data->{'status'}); 
@@ -22,7 +22,7 @@ if($arrDados["acao"]=="insert")
 
 		$arrMessage['success'] 		= true; 
 		$arrMessage['message'] 		= "Registro salvo com sucesso!";
-		$arrMessage['data']    		= $data;		
+		$arrMessage['usuario']    	= $data;		
 	}
 	else
 	{
@@ -35,13 +35,13 @@ if($arrDados["acao"]=="insert")
 }
 else if($arrDados["acao"]=="update")
 {
-	$data 		= json_decode($arrDados['data']);
-	$idUsuario 	= mysql_escape_string($data->{'idUsuario'}); 
-	$strNome 	= mysql_escape_string($data->{'NmUsuario'}); 
-	$strEmail 	= mysql_escape_string($data->{'DsEmail'}); 
-	$strSenha 	= mysql_escape_string($data->{'DsSenha'}); 
+	$data 		= json_decode($arrDados['usuario']);
+	$idUsuario 	= mysql_escape_string($data->{'id'}); 
+	$strNome 	= mysql_escape_string($data->{'login'}); 
+	$strStatus 	= mysql_escape_string($data->{'status'}); 
+	$strSenha 	= mysql_escape_string($data->{'password'}); 
 
-	$strSQL = "UPDATE USUARIO SET NmUsuario = '".$strNome."', DsEmail = '".$strEmail."', DsSenha = '".$strSenha."' WHERE idUsuario = '".$idUsuario."' ";
+	$strSQL = "UPDATE USUARIO SET LOGIN = '".$strNome."', PASSWORD = '".$strSenha."', STATUS = '".$strStatus."' WHERE COD_USUARIO = '".$idUsuario."' ";
 	if(mysql_query($strSQL))
 	{
 		$arrMessage['success'] 						= true; 
@@ -73,7 +73,7 @@ else if($arrDados["acao"]=="delete")
      }
 	 else 
 	 {
-            $idUsuario  = $arrUsuarios->idUsuario;
+            $idUsuario  = $arrUsuarios->id;
            	$strSQL 	= "DELETE FROM USUARIO WHERE COD_USUARIO = '".$idUsuario."'"; 			
             mysql_query($strSQL);
      }
@@ -116,7 +116,7 @@ else
         $total 		= mysql_fetch_array(mysql_query($strSQL));
 
         echo json_encode(array(
-            "data" => $arrBanco,
+            "usuario" => $arrBanco,
             "success" => true,
             "inicio" => $inicio,
             "total" => $total['total']

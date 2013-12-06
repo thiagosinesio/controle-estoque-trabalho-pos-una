@@ -13,30 +13,20 @@ $menu = "{
                         text:'Cadastros',
                         expanded: true,
                         children:[
-                            {
-                                text:'Administrador',
-                                leaf:true,
-                                itemMenu: 'administradorList'
-                            },
-                            {
+                         	{
                                 text:'Categoria',
                                 leaf:true,
                                 itemMenu: 'categoriaList'
                             },
                             {
-                                text:'Cliente',
-                                leaf:true,
-                                itemMenu: 'clienteList'
-                            },
-                            {
-                                text:'Fornecedor',
-                                leaf:true,
-                                itemMenu: 'fornecedorList'
-                            },
-                            {
                                 text:'Movimentação',
                                 leaf:true,
                                 itemMenu: 'movimentacaoList'
+                            },
+                            {
+                                text:'Pessoa',
+                                leaf:true,
+                                itemMenu: 'pessoaList'
                             },
                             {
                                 text:'Produto',
@@ -66,18 +56,7 @@ $menu = "{
 
                         ]
                     }
-                    ,
-                    {
-                        text:'Relatórios',
-                        expanded: true,
-                        children:[
-                            {
-                                text:'Gráfico de Agenda',
-                                leaf:true,
-                                itemMenu: 'graficoAgenda'
-                            }
-                        ]
-                    }
+                    
                 ]
             }";
 echo $menu;

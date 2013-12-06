@@ -8,7 +8,7 @@ Ext.define('UNA.view.Viewport', {
         xtype: 'box',
         id: 'header',
         region: 'north',
-        html: '<h1>Sistema Agenda - UNA 1.0</h1>',
+        html: '<h1>Sistema Estoque - UNA 1.0</h1>',
         height: 45
     }
     ,{

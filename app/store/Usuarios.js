@@ -8,14 +8,14 @@ Ext.define('UNA.store.Usuarios', {
 			simpleSortMode : true,
 			type           : 'ajax',
 			api            : {
-				read    : 'http://www.estoque.ninjadevspace.com/estoqueservice/categorias/list',
+				read    : 'php/usuarios.php?acao=list',
 				create  : 'php/usuarios.php?acao=insert',
-				update  : 'http://www.estoque.ninjadevspace.com/estoqueservice/categorias/update',
+				update  : 'php/usuarios.php?acao=update',
 				destroy : 'php/usuarios.php?acao=delete'			
 			},
 		actionMethods : {
+				read   : 'GET',
 				create : 'POST',
-				read   : 'POST',
 				update : 'POST',
 				destroy: 'POST' 		
 		},

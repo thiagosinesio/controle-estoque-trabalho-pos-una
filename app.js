@@ -29,6 +29,7 @@ Ext.application({
         //'Administrador',
         'Categoria',
         'Produto',
+        'TipoMovimentacao',
         'TipoPessoa',
         'UnidadeMedida',
         'Usuario'
@@ -36,7 +37,7 @@ Ext.application({
         'Cliente',
         'Fornecedor',
         'Movimentacao',
-        'TipoMovimentacao*/
+        */
 
     ],    
     autoCreateViewport: true,

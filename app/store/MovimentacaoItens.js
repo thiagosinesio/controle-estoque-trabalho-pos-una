@@ -10,9 +10,9 @@ Ext.define('UNA.store.MovimentacaoItens', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'http://www.estoque.ninjadevspace.com/estoqueservice/movimentacaoitens/list',
+				read    : 'estoqueservice/movimentacaoitens/list',
 				create  : 'php/movimentacaoitens.php?acao=insert',		
-				update  : 'http://estoque.ninjadevspace.com/estoqueservice/movimentacaoitens/update',						
+				update  : 'estoqueservice/movimentacaoitens/update',						
 				destroy : 'php/movimentacaoitens.php?acao=delete'			
 						  },
 		actionMethods 	: {
