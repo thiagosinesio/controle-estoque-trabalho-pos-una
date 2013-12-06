@@ -4,7 +4,7 @@ Ext.define('UNA.model.UnidadeMedida', {
     fields: [
     {
        name : 'id',
-	   type: 'int'
+        type: 'int'
     }, 
 	{
         name : 'unidade',
