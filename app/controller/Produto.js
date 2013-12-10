@@ -89,7 +89,7 @@ Ext.define('UNA.controller.Produto', {
 			// faz a requisição da exclusão
 			Ext.Ajax.request ({
 				scope: this,
-				url	: 'estoqueservice/produtos/remove', //arquivo que contém o método a utilizar
+				url	: 'php/produtos.php?acao=delete', //arquivo que contém o método a utilizar
 				params	: {
 					'id[]'	: idSel //manda o array idSel para o método excluir o registro 
 				},
@@ -132,10 +132,18 @@ Ext.define('UNA.controller.Produto', {
 				{						
 					Ext.Ajax.request ({
 						scope	: this,
-						url		: 'estoqueservice/produtos/update', //arquivo que contém o método a utilizar
+						url		: 'php/produtos.php?acao=update', //arquivo que contém o método a utilizar
 						params	: {
-						'id'	: id,
-						'descricao'   : values.descricao //manda os dados do form 
+                                                    'id'	: id,                                                
+                                                    'descricao': values.descricao,   
+                                                    'estoqueMinimo': values.estoqueMinimo,
+                                                    'estoqueAtual': values.estoqueAtual,  
+                                                    'estoqueMaximo': values.estoqueMaximo,
+                                                    'precoCompra': values.precoCompra,  
+                                                    'precoVenda': values.precoVenda,
+                                                    'status': values.status,   
+                                                    'idCategoria': values.idCategoria,
+                                                    'idUnidade': values.idUnidade                                                
 						},
 						success: function(r){ 
 							//Se tudo OK, pegamos a resposta que é um JSON e decodificamos para um objeto

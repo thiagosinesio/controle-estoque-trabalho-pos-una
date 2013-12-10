@@ -1,14 +1,15 @@
 <html>
     <head>
-		<!-- Definição dos recursos --> 
+		<!-- DefiniÃ§Ã£o dos recursos --> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
         <title>Sistema Estoque UNA</title>
         <link rel="stylesheet" type="text/css" href="extjs/resources/css/bootstrap/bootstrap.css" />
         <!--<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">-->
         <link rel="stylesheet" type="text/css" href="resources/css/UNA.css">
         <link rel="stylesheet" type="text/css" href="resources/css/Ext.ux.MessageBox.css">
-        <!-- Definição da aplicação --> 
+        <!-- DefiniÃ§Ã£o da aplicaÃ§Ã£o --> 
         <script type="text/javascript" src="extjs/ext-all.js"></script>
+        <!--<script type="text/javascript" src="extjs/ext-all-debug.js"></script>-->
         <script type="text/javascript" src="app.js"></script>		
 		<!-- Plugins --> 
 		<script type="text/javascript" src="app/renderer/comborenderer.js"></script>

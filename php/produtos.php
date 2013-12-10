@@ -61,10 +61,29 @@ if($arrDados["acao"]=="insert")
 }
 else if($arrDados["acao"]=="update")
 {
-	$id 	= mysql_escape_string($arrDados['idCategoria']); 
-	$strNome 		= mysql_escape_string($arrDados['NmCategoria']); 	
-
-	$strSQL = "UPDATE TIPO_PESSOA SET NmCategoria = '".$strNome."' WHERE COD_TIPO_PESSOA = '".$id."' ";
+	$id 	= mysql_escape_string($arrDados['id']); 
+	$strNome    = mysql_escape_string($arrDados['descricao']); 	
+        $strEstoqMin    = mysql_escape_string($arrDados['estoqueMinimo']); 	
+        $strEstoqAtual    = mysql_escape_string($arrDados['estoqueAtual']); 	
+        $strEstoqMax    = mysql_escape_string($arrDados['estoqueMaximo']); 	
+        $strPrecoCompra    = mysql_escape_string($arrDados['precoCompra']); 	
+        $strPrecoVenda    = mysql_escape_string($arrDados['precoVenda']); 	
+        $strStatus    = mysql_escape_string($arrDados['status']); 	
+        $strIdCat    = mysql_escape_string($arrDados['idCategoria']); 	
+        $strIdUnid    = mysql_escape_string($arrDados['idUnidade']); 	
+        
+        
+	$strSQL = "UPDATE PRODUTO SET "
+                . "DESCRICAO = '".$strNome."',  
+                    ESTOQUE_MINIMO = '".$strEstoqMin."',
+                    ESTOQUE_ATUAL = '".$strEstoqAtual."',
+                    ESTOQUE_MAXIMO = '".$strEstoqMax."',
+                    PRECO_COMPRA = '".$strPrecoCompra."', 
+                    PRECO_VENDA = '".$strPrecoVenda."',
+                    STATUS = '".$strStatus."',
+                    COD_CATEGORIA = '".$strIdCat."',
+                    COD_UNIDADE_MEDIDA = '".$strIdUnid."'
+                    WHERE COD_PRODUTO = '".$id."' ";
 	if(mysql_query($strSQL))
 	{
 		$arrMessage['success'] 	= true; 
@@ -109,7 +128,8 @@ else
         $strSQL = "SELECT COD_PRODUTO AS id, PRODUTO.DESCRICAO AS descricao, ESTOQUE_MINIMO AS estoqueMinimo, 
                     ESTOQUE_ATUAL AS estoqueAtual, ESTOQUE_MAXIMO AS estoqueMaximo, PRECO_COMPRA AS precoCompra, 
                     PRECO_VENDA AS precoVenda, STATUS AS status, CATEGORIA.DESCRICAO AS categoriaProduto, 
-                    UNIDADE AS medidaProduto
+                    UNIDADE AS medidaProduto, CATEGORIA.COD_CATEGORIA AS idCategoria, 
+                    UNIDADE_MEDIDA.COD_UNIDADE AS idUnidade
                     FROM PRODUTO 
                     JOIN CATEGORIA ON CATEGORIA.COD_CATEGORIA = PRODUTO.COD_CATEGORIA
                     JOIN UNIDADE_MEDIDA ON UNIDADE_MEDIDA.COD_UNIDADE = PRODUTO.COD_UNIDADE_MEDIDA"

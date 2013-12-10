@@ -1,12 +1,12 @@
 Ext.require(['UNA.view.AbstractForm']);
 Ext.require(['UNA.view.AbstractWindow']);
-Ext.require(['UNA.view.produto.ComboCategoria']);
-Ext.require(['UNA.view.produto.ComboUnidadeMedida']);
+//Ext.require(['UNA.view.pessoa.ComboCategoria']);
+//Ext.require(['UNA.view.pessoa.ComboUnidadeMedida']);
 
-Ext.define('UNA.view.produto.Edit', {
+Ext.define('UNA.view.pessoa.Edit', {
     extend: 'UNA.view.AbstractWindow',
-    alias : 'widget.produtoEdit',
-    title : 'Edição de Produto',
+    alias : 'widget.pessoaEdit',
+    title : 'Edição de Pessoa',
 
     initComponent: function() {
     	

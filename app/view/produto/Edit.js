@@ -35,10 +35,28 @@ Ext.define('UNA.view.produto.Edit', {
                     {
                         name : 'precoVenda',
                         fieldLabel: 'Preço Venda'             
-                    },  
+                    },
                     {
-                        name : 'status',
-                        fieldLabel: 'Status'             
+                        xtype      : 'fieldcontainer',
+                        fieldLabel : 'Status',
+                        defaultType: 'radiofield',
+                        defaults: {
+                            flex: 1
+                        },
+                        layout: 'hbox',
+                        items: [
+                            {
+                                boxLabel  : 'Disponível',
+                                name      : 'status',
+                                inputValue: 'V',
+                                id        : 'radio1'
+                            }, {
+                                boxLabel  : 'Indisponível',
+                                name      : 'status',
+                                inputValue: 'F',
+                                id        : 'radio2'
+                            }
+                        ]
                     },
                     {
                         xtype: 'categoriaCombo'

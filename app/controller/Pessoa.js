@@ -5,7 +5,7 @@ Ext.define('UNA.controller.Pessoa', {
     models: ['Pessoa'], 
 	
     views: [
-    'pessoa.Edit',
+        'pessoa.Edit',
 	'pessoa.List'    
     ],
     
@@ -17,7 +17,7 @@ Ext.define('UNA.controller.Pessoa', {
     {
         ref:'pessoaList', 
         selector:'pessoaList'
-    }
+    } 
     ],
 
     init: function() {
@@ -54,7 +54,7 @@ Ext.define('UNA.controller.Pessoa', {
     
     insert: function(btn, evt, opt) {
         var view = Ext.widget('pessoaEdit');
-        view.setTitle('Novo Pessoa');
+        view.setTitle('Nova Pessoa');
     },
     
     deleteUser: function() {
@@ -132,10 +132,10 @@ Ext.define('UNA.controller.Pessoa', {
 				{						
 					Ext.Ajax.request ({
 						scope	: this,
-						url		: 'estoqueservice/pessoas/update', //arquivo que contém o método a utilizar
+						url		: 'php/pessoas.php?acao=update', //arquivo que contém o método a utilizar
 						params	: {
 						'id'	: id,
-						'descricao'   : values.descricao //manda os dados do form 
+						'tipo'   : values.tipo //manda os dados do form 
 						},
 						success: function(r){ 
 							//Se tudo OK, pegamos a resposta que é um JSON e decodificamos para um objeto

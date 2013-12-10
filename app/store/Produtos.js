@@ -12,11 +12,11 @@ Ext.define('UNA.store.Produtos', {
 			api         : {
 				read    : 'php/produtos.php?acao=list',
 				create  : 'php/produtos.php?acao=insert',		
-				update  : 'estoqueservice/categorias/update',						
+				update  : 'php/produtos.php?acao=update',						
 				destroy : 'php/produtos.php?acao=delete'			
 						  },
 		actionMethods 	: {
-				read	: 'GET',
+				read	: 'POST',
 				create	: 'POST',
 				update	: 'POST',
 				destroy : 'POST'		
