@@ -135,7 +135,14 @@ Ext.define('UNA.controller.Pessoa', {
 						url		: 'php/pessoas.php?acao=update', //arquivo que contém o método a utilizar
 						params	: {
 						'id'	: id,
-						'tipo'   : values.tipo //manda os dados do form 
+						'nome'   : values.nome, //manda os dados do form 
+                                                'cpfcnpj'   : values.cpfcnpj,
+                                                'telefone'   : values.telefone,
+                                                'email'   : values.email,
+                                                'grupo'   : values.grupo,
+                                                'idUsuario'   : values.idUsuario,
+                                                'idTipoPessoa'   : values.idTipoPessoa
+                                                                       
 						},
 						success: function(r){ 
 							//Se tudo OK, pegamos a resposta que é um JSON e decodificamos para um objeto
