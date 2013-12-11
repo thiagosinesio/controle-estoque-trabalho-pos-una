@@ -25,22 +25,15 @@ Ext.application({
     name: 'UNA',
     appFolder: 'app',
     controllers: [
-     //'Usuario', 'Categoria', 'Agenda', 'GraficoAgenda'
-        //'Administrador',
         'Categoria',
         'Movimentacao',
+        'MovimentacaoItem',
         'Pessoa',
         'Produto',
         'TipoMovimentacao',
         'TipoPessoa',
         'UnidadeMedida',
         'Usuario'
-        /*
-        'Cliente',
-        'Fornecedor', 
-        'Movimentacao',
-        */
-
     ],    
     autoCreateViewport: true,
     launch: function() {

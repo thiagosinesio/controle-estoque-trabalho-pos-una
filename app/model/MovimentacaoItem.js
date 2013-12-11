@@ -21,6 +21,10 @@ Ext.define('UNA.model.MovimentacaoItem', {
     {
         name : 'idProduto',
 		type : 'int'
+    },
+    {
+        name : 'produto',
+        type: 'string'
     }
     ]
 });

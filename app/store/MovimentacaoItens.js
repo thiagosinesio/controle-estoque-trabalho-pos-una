@@ -10,30 +10,30 @@ Ext.define('UNA.store.MovimentacaoItens', {
         simpleSortMode	: true,
         type			: 'ajax',			
 			api         : {
-				read    : 'estoqueservice/movimentacaoitens/list',
-				create  : 'php/movimentacaoitens.php?acao=insert',		
-				update  : 'estoqueservice/movimentacaoitens/update',						
-				destroy : 'php/movimentacaoitens.php?acao=delete'			
+				read    : 'php/movimentacaoItens.php?acao=list',
+				create  : 'php/movimentacaoItens.php?acao=insert',		
+				update  : 'php/movimentacaoItens.php?acao=update',						
+				destroy : 'php/movimentacaoItens.php?acao=delete'			
 						  },
 		actionMethods 	: {
-				read	: 'GET',
+				read	: 'POST',
 				create	: 'POST',
 				update	: 'POST',
 				destroy : 'POST'		
 						  },  
 			reader		: {
 				type		: 'json',
-				root		: 'movimentacaoitem',
+				root		: 'data',
             successProperty	: 'success'
         },
 		writer			: {
             type			: 'json',
             writeAllFields	: true,
             encode			: true,
-            root			: 'movimentacaoitem'
+            root			: 'data'
         },
 		extraParams: {             
-            sort 	: 'id',    
+            sort 	: 'COD_MOVIMENTACAO_ITEM',    
             dir 	: 'ASC'            
         },
         listeners: {

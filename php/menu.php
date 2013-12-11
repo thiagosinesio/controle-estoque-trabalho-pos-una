@@ -24,6 +24,11 @@ $menu = "{
                                 itemMenu: 'movimentacaoList'
                             },
                             {
+                                text:'Movimentação de Itens',
+                                leaf:true,
+                                itemMenu: 'movimentacaoItemList'
+                            },
+                            {
                                 text:'Pessoa',
                                 leaf:true,
                                 itemMenu: 'pessoaList'
