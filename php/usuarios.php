@@ -56,33 +56,26 @@ else if($arrDados["acao"]=="update")
 	 echo json_encode($arrMessage);
 }
 else if($arrDados["acao"]=="delete")
-{
-    $arrUsuarios = json_decode($_POST['usuario']);
-	
-	if (is_array($arrUsuarios)) 
+{	
+    $arrTiposPessoa = $arrDados["id"];
+	//var_dump($arrDados['id']);
+	for($i=0;$i<count($arrTiposPessoa);$i++)
 	{
-      foreach ($arrUsuarios as $usuario) 
-	   {
-                $idUsuario 	= mysql_real_escape_string($usuario->id);
-				$strSQL 	= "DELETE FROM USUARIO WHERE COD_USUARIO = '".$idUsuario."'"; 
+       $id = mysql_real_escape_string($arrTiposPessoa[$i]);
+	   $strSQL 	 	= "DELETE FROM USUARIO WHERE COD_USUARIO = '".$id."'"; 
                 if(!mysql_query($strSQL))
 				{
+						echo json_encode(array(
+							"success" => false,
+							"message" => 'Erro na exclusão'
+					));	
 					break;	
 				}
-	   }
-     }
-	 else 
-	 {
-            $idUsuario  = $arrUsuarios->id;
-           	$strSQL 	= "DELETE FROM USUARIO WHERE COD_USUARIO = '".$idUsuario."'"; 			
-            mysql_query($strSQL);
-     }
-
-        echo json_encode(array(
-            "success" => true,
-            "message" => 'Registro(s) excluído(s) com sucesso'
-        ));
-	 
+	}
+	echo json_encode(array(
+		"success" => true,
+		"message" => 'Registro(s) excluído(s) com sucesso'
+	));	 
 }
 else 
 {
