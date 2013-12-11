@@ -28,6 +28,7 @@ Ext.application({
      //'Usuario', 'Categoria', 'Agenda', 'GraficoAgenda'
         //'Administrador',
         'Categoria',
+        'Movimentacao',
         'Pessoa',
         'Produto',
         'TipoMovimentacao',
