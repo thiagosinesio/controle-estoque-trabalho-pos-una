@@ -26,6 +26,7 @@ Ext.application({
     appFolder: 'app',
     controllers: [
         'Categoria',
+        'GraficoProdutoCategoria',
         'Movimentacao',
         'MovimentacaoItem',
         'Pessoa',

@@ -5,16 +5,16 @@ $arrMessage = array();
 
 if($arrDados["acao"]=="grafico")
 {    	        
-        $strSQL  = "SELECT 	  COUNT( a.idAgenda ) AS total
-							, c.NmCategoria AS categoria   
+        $strSQL  = "SELECT COUNT( PRODUTO.COD_PRODUTO ) AS total
+							, CATEGORIA.DESCRICAO AS categoria   
 						   FROM 
-								teagenda a 
+								PRODUTO
 					 INNER JOIN 
-								tecategoria c 
+								CATEGORIA
 							 ON 
-								a.teCategoria_idCategoria = c.idCategoria
+								PRODUTO.COD_CATEGORIA = CATEGORIA.COD_CATEGORIA
 					   GROUP BY 
-								c.NmCategoria";
+								CATEGORIA.DESCRICAO";
                				
 		$objRs = mysql_query($strSQL);
 		$arrBanco = array(); 

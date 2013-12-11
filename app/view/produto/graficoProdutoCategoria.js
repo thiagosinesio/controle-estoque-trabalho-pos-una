@@ -1,12 +1,12 @@
-Ext.define('UNA.view.agenda.graficoAgenda' ,{
+Ext.define('UNA.view.produto.graficoProdutoCategoria' ,{
     extend	: 'Ext.chart.Chart',
-	alias 	: 'widget.graficoAgenda',   
+	alias 	: 'widget.graficoProdutoCategoria',   
     style	: 'background:#fff',
     animate	: true,
 	shadow	: true,
 	legend	: true,
 	legend	: { position: 'right'},
-    store	: 'GraficoAgendas',
+    store	: 'GraficoProdutosCategorias',
             axes: [{
                 type: 'Numeric',
                 position: 'left',
@@ -14,7 +14,7 @@ Ext.define('UNA.view.agenda.graficoAgenda' ,{
                 label: {
                     renderer: Ext.util.Format.numberRenderer('0,0')
                 },
-                title: 'Qtde de Contatos',
+                title: 'Qtde de Produtos',
                 grid: true,
                 minimum: 0
             }, {
@@ -32,7 +32,7 @@ Ext.define('UNA.view.agenda.graficoAgenda' ,{
                   width: 300,
                   height: 30,
                   renderer: function(storeItem, item) {
-                    this.setTitle('Qtde de Contato(s) de ' + storeItem.get('categoria') + ': ' + storeItem.get('total') + '.');
+                    this.setTitle('Qtde de Produto(s) de ' + storeItem.get('categoria') + ': ' + storeItem.get('total') + '.');
                   }
                 },
                 label: {

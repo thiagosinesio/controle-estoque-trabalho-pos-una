@@ -60,6 +60,17 @@ $menu = "{
                             }
 
                         ]
+                    },
+                    {
+                        text:'Relatórios',
+                        expanded: true,
+                        children:[
+                            {
+                                text:'Gráfico de Produtos por Categoria',
+                                leaf:true,
+                                itemMenu: 'graficoProdutoCategoria'
+                            }
+                        ]
                     }
                     
                 ]
