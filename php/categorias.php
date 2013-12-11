@@ -76,7 +76,7 @@ else
         $dir 	= $arrDados['dir']  ? $arrDados['dir']  : 'ASC';
         $order 	= $sort . ' ' . $dir;
         
-        $strSQL = "SELECT idCategoria, NmCategoria FROM tecategoria ORDER BY ".mysql_real_escape_string($order);
+        $strSQL = "SELECT COD_CATEGORIA AS id, DESCRICAO AS descricao FROM CATEGORIA ORDER BY ".mysql_real_escape_string($order);
         
         if($arrDados["start"] !== null && $arrDados["start"] !== 'start' && $arrDados["limit"] !== null && $arrDados["limit"] !== 'limit')
 		{
@@ -97,7 +97,7 @@ else
 		}		        
 		
 		        
-        $strSQL 	= "SELECT COUNT(*) AS total FROM tecategoria";
+        $strSQL 	= "SELECT COUNT(*) AS total FROM CATEGORIA";
         $total 		= mysql_fetch_array(mysql_query($strSQL));
 
         echo json_encode(array(
